@@ -266,7 +266,7 @@
                         <div class="card-header">Hot Spot Map</div>
                         <div id="map">
                             <script>
-                                var map = L.map('map').setView([3.1466, 101.69], 11);
+                                var map = L.map('map').setView([3.149070050427104, 101.71328688437869], 15);
 
                                 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
                                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -277,24 +277,51 @@
                                 accessToken: 'pk.eyJ1IjoiZmVsaWNpYXdubiIsImEiOiJja3lwdXNwaXkwYTZxMnVzamRsajgycmF5In0.tPQkyl-BtR_gETOpaHMBIQ'
                             }).addTo(map);
 
-                            var circle = L.circle([3.1466, 101.69], {
+                            circleConfig = {
                                 color: 'red',
                                 fillColor: '#f03',
-                                fillOpacity: 0.9,
-                                radius: 6000
-                            }).addTo(map);
-                            var circle = L.circle([3.1174, 101.6781], {
-                                color: 'red',
-                                fillColor: '#f03',
-                                fillOpacity: 0.7,
-                                radius: 500
-                            }).addTo(map);
-                            var circle = L.circle([3.0684, 101.6025], {
-                                color: 'red',
-                                fillColor: '#f03',
-                                fillOpacity: 0.9,
-                                radius: 2000
-                            }).addTo(map);
+                                fillOpacity: 0.6,
+                                radius: 30}
+                            
+                            // KLCC Tower
+                            var circle = L.circle([3.153026311820246, 101.70383980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15332831182246, 101.70383980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15362831182246, 101.70313980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15232831182246, 101.70343980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15132831182246, 101.70343980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15232831182246, 101.70243980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15232831182246, 101.70143980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15232831182246, 101.70443980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15232831182246, 101.70543980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15432831182246, 101.70543980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15432831182246, 101.70443980739446], circleConfig).addTo(map);
+                            var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
+
+                            // Pavillion
+                            var circle = L.circle([3.149070050427104, 101.71328688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71228688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71128688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71528688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71428688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.148070050427104, 101.71428688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149570050427104, 101.71428688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.148570050427104, 101.71428688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.148570050427104, 101.71278688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71168688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.147870050427104, 101.71228688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.148570050427104, 101.71128688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.148970050427104, 101.71128688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149370050427104, 101.71328688437869], circleConfig).addTo(map);
+                            var circle = L.circle([3.149070050427104, 101.71288688437869], circleConfig).addTo(map);
+
+                            // Petaling Street
+                            var circle = L.circle([3.1454895145383124, 101.69733433834683], circleConfig).addTo(map);
+                            var circle = L.circle([3.1444895145383124, 101.69533433834683], circleConfig).addTo(map);
+                            var circle = L.circle([3.1434895145383124, 101.69733433834683], circleConfig).addTo(map);
+
                             </script>
                         </div>
                     </div>
