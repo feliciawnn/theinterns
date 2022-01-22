@@ -44,6 +44,7 @@ var barChartData = {
 
 };
 
+// Configure Pie Chart Data
 var configPie = {
     type: 'pie',
     data: {
