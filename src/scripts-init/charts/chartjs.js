@@ -53,14 +53,10 @@ var configPie = {
                 randomScalingFactor(),
                 randomScalingFactor(),
                 randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
             ],
             backgroundColor: [
                 window.chartColors.red,
                 window.chartColors.orange,
-                window.chartColors.yellow,
-                window.chartColors.green,
                 window.chartColors.blue,
             ],
             label: 'Dataset 1'
@@ -68,8 +64,6 @@ var configPie = {
         labels: [
             'Red',
             'Orange',
-            'Yellow',
-            'Green',
             'Blue'
         ]
     },
@@ -117,7 +111,6 @@ var barChartData = {
             randomScalingFactor()
         ]
     }]
-
 };
 
 var configRadar = {
@@ -448,6 +441,7 @@ window.onload = function () {
     // Pie
 
     if (document.getElementById('chart-area')) {
+        console.log("Hi")
         var ctx2 = document.getElementById('chart-area').getContext('2d');
         window.myPie = new Chart(ctx2, configPie);
     }
