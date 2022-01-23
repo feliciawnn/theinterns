@@ -21,7 +21,6 @@
 <div class="app-container app-theme-white body-tabs-shadow fixed-header fixed-sidebar">
     <div class="app-header header-shadow">
         <div class="app-header__logo">
-            <div class="logo-src"></div>
             <div class="header__pane ml-auto">
                 <div>
                     <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -180,7 +179,6 @@
     <div class="app-main">
             <div class="app-sidebar sidebar-shadow">
                 <div class="app-header__logo">
-                    <div class="logo-src"></div>
                     <div class="header__pane ml-auto">
                         <div>
                             <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
@@ -277,15 +275,26 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="main-card mb-3 card" style="height: 20vh;">
-                        <div class="card-header ">
-                            <div class="card-header-tab card-header">
-                                <div class="card-header-title font-size-lg text-capitalize font-weight-bold"><i class="header-icon lnr-laptop-phone mr-3 text-muted opacity-6"> </i>Latest Customer Segmentation Data</div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body ">
+                                    <h5 class="card-title text-capitalize">Age Group</h5>
+                                    <canvas id="chart-bar-inf-two"></canvas>
+                                </div>
                             </div>
                         </div>
-                        <iframe width="100%" height="100%" src="https://datastudio.google.com/embed/reporting/8fa7e4ef-f117-4ad3-9565-2c0108ae1b79/page/It1XB" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        <div class="text-center d-block p-3 card-footer">
+                        <div class="col-md-6">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h5 class="card-title text-capitalize">Race</h5>
+                                    <canvas id="chart-horiz-bar-inf-two"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mx-auto text-center">
                             <button class="btn-pill btn-shadow btn-wide fsize-1 btn btn-primary btn-lg">
                                 <a href="./potential-segment.html" style="text-decoration: none; color: #FFFFFF;">
                                     <span class="mr-2 opacity-7">
@@ -296,6 +305,7 @@
                             </button>
                         </div>
                     </div>
+                    <div class="divider"></div>
                 </div>
 
 
@@ -352,6 +362,45 @@ window.chartColors.purple];
 
 new Chart("chart-horiz-bar-inf", {
   type: "horizontalBar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    responsive: true
+  }
+});
+
+var xValues = ["11-20", "21-30", "31-40", "41-50","51-60","61-70","71-80"];
+var yValues = [321569, 8838278, 28717518, 35420731,20257812,10209614,1756466];
+var barColors = [window.chartColors.red, window.chartColors.green,window.chartColors.blue,window.chartColors.orange,
+window.chartColors.purple,window.chartColors.red];
+
+new Chart("chart-bar-inf-two", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    responsive: true
+  }
+});
+
+var xValues = ['BUMIPUTRA','CHINESE','INDIAN','OTHERS'];
+var yValues = [25864275, 71434192, 5096369,3216560];
+var barColors = [window.chartColors.red, window.chartColors.green,window.chartColors.blue,window.chartColors.orange];
+
+new Chart("chart-horiz-bar-inf-two", {
+  type: "bar",
   data: {
     labels: xValues,
     datasets: [{
