@@ -214,7 +214,7 @@
                 <div class="scrollbar-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu" >
-                            <li class="app-sidebar__heading">Current RHBuddies</li>
+                            <li class="app-sidebar__heading">Current Influencers</li>
                             <li>
                                 <a href="index_marketing.html">
                                     <i class="metismenu-icon pe-7s-graph">
@@ -224,11 +224,11 @@
                             <li>
                                 <a href="buddy-ranking.html">
                                     <i class="metismenu-icon pe-7s-star">
-                                    </i>Buddies Ranking
+                                    </i>Influencers Ranking
                                 </a>
                             </li>
 
-                            <li class="app-sidebar__heading">Potential Buddies</li>
+                            <li class="app-sidebar__heading">Potential Influencers</li>
                             <li>
                                 <a href="potential-overview.html">
                                     <i class="metismenu-icon pe-7s-display2"></i>
@@ -262,67 +262,126 @@
             </div>    
             <div class="app-main__outer">
                 <div class="app-main__inner">
-                    <div class="main-card mb-3 card">
-                        <div class="card-header">Hot Spot Map</div>
-                        <div id="map">
-                            <script>
-                                var map = L.map('map').setView([3.149070050427104, 101.71328688437869], 15);
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-card mb-3 card">
+                                <div class="card-header text-capitalize font-size-lg">Potential Hot Spots</div>
+                                <div id="map">
+                                    <script>
+                                        var map = L.map('map').setView([3.149070050427104, 101.71328688437869], 15);
 
-                                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                                maxZoom: 18,
-                                id: 'mapbox/streets-v11',
-                                tileSize: 512,
-                                zoomOffset: -1,
-                                accessToken: 'pk.eyJ1IjoiZmVsaWNpYXdubiIsImEiOiJja3lwdXNwaXkwYTZxMnVzamRsajgycmF5In0.tPQkyl-BtR_gETOpaHMBIQ'
-                            }).addTo(map);
+                                        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                                        maxZoom: 18,
+                                        id: 'mapbox/streets-v11',
+                                        tileSize: 512,
+                                        zoomOffset: -1,
+                                        accessToken: 'pk.eyJ1IjoiZmVsaWNpYXdubiIsImEiOiJja3lwdXNwaXkwYTZxMnVzamRsajgycmF5In0.tPQkyl-BtR_gETOpaHMBIQ'
+                                    }).addTo(map);
 
-                            circleConfig = {
-                                color: 'red',
-                                fillColor: '#f03',
-                                fillOpacity: 0.6,
-                                radius: 30}
-                            
-                            // KLCC Tower
-                            var circle = L.circle([3.153026311820246, 101.70383980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15332831182246, 101.70383980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15362831182246, 101.70313980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15232831182246, 101.70343980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15132831182246, 101.70343980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15232831182246, 101.70243980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15232831182246, 101.70143980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15232831182246, 101.70443980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15232831182246, 101.70543980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15432831182246, 101.70543980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15432831182246, 101.70443980739446], circleConfig).addTo(map);
-                            var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
+                                    circleConfig = {
+                                        color: 'red',
+                                        fillColor: '#f03',
+                                        fillOpacity: 0.6,
+                                        radius: 30}
+                                    
+                                    // KLCC Tower
+                                    var circle = L.circle([3.153026311820246, 101.70383980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15332831182246, 101.70383980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15362831182246, 101.70313980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15232831182246, 101.70343980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15132831182246, 101.70343980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15232831182246, 101.70243980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15232831182246, 101.70143980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15232831182246, 101.70443980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15232831182246, 101.70543980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15332831182246, 101.70343980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15432831182246, 101.70543980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15432831182246, 101.70443980739446], circleConfig).addTo(map);
+                                    var circle = L.circle([3.15332831182246, 101.70543980739446], circleConfig).addTo(map);
 
-                            // Pavillion
-                            var circle = L.circle([3.149070050427104, 101.71328688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71228688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71128688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71528688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71428688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.148070050427104, 101.71428688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149570050427104, 101.71428688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.148570050427104, 101.71428688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.148570050427104, 101.71278688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71168688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.147870050427104, 101.71228688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.148570050427104, 101.71128688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.148970050427104, 101.71128688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149370050427104, 101.71328688437869], circleConfig).addTo(map);
-                            var circle = L.circle([3.149070050427104, 101.71288688437869], circleConfig).addTo(map);
+                                    // Pavillion
+                                    var circle = L.circle([3.149070050427104, 101.71328688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71228688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71128688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71528688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71428688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.148070050427104, 101.71428688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149570050427104, 101.71428688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.148570050427104, 101.71428688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.148570050427104, 101.71278688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71168688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.147870050427104, 101.71228688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.148570050427104, 101.71128688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.148970050427104, 101.71128688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149370050427104, 101.71328688437869], circleConfig).addTo(map);
+                                    var circle = L.circle([3.149070050427104, 101.71288688437869], circleConfig).addTo(map);
 
-                            // Petaling Street
-                            var circle = L.circle([3.1454895145383124, 101.69733433834683], circleConfig).addTo(map);
-                            var circle = L.circle([3.1444895145383124, 101.69533433834683], circleConfig).addTo(map);
-                            var circle = L.circle([3.1434895145383124, 101.69733433834683], circleConfig).addTo(map);
+                                    // Petaling Street
+                                    var circle = L.circle([3.1454895145383124, 101.69733433834683], circleConfig).addTo(map);
+                                    var circle = L.circle([3.1444895145383124, 101.69533433834683], circleConfig).addTo(map);
+                                    var circle = L.circle([3.1434895145383124, 101.69733433834683], circleConfig).addTo(map);
 
-                            </script>
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="main-card mb-3 card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Hot Spot Areas</h3>
+                                    <table style="width: 100%;" id="example" class="table table-hover table-striped table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Rank</th>
+                                            <th>Area Name</th>
+                                            <th>Average Spending</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Pavillion KL Shopping Mall</td>
+                                            <td>RM 1,932</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>MidValley Megamall</td>
+                                            <td>RM 1,730</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Suria KLCC Mall</td>
+                                            <td>RM 1,530</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Midvalley Megamall</td>
+                                            <td>RM 1,515</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>The Garden Mall</td>
+                                            <td>RM 1,510</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>1 Utama Shopping Mall</td>
+                                            <td>RM 524</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Sunway Pyramid</td>
+                                            <td>RM 310</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>    
