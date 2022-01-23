@@ -27,8 +27,9 @@ Table of Content
 
 2. How To Use This Prototype
 	2.1. Navigating To The Dashboards
-		a. Open from index.js under the architect-html-pro folder or open from the following link (https://feliciawnn.github.io/theinterns/)
+		a. Open from index.js on the ROOT of this folder or open from the following link (https://feliciawnn.github.io/theinterns/)
 		b. Select whether you want to see the "marketing manager" dashboard or "RHB Influencer" dashboard
 	
 	2.2. When you are done using the dashboards and want to switch acc
-		a. Open the profile image on the top right of your screen and a drop down with your name will show				b. Click log out from the pop out and reselect your dashboard option (see 2.1.)
+		a. Open the profile image on the top right of your screen and a drop down with your name will show				
+		b. Click log out from the pop out and reselect your dashboard option (see 2.1.)
